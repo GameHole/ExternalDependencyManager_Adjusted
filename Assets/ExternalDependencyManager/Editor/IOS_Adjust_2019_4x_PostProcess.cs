@@ -7,13 +7,13 @@ using System.Collections.Generic;
 
 public class IOS_Adjust_2019_4x_PostProcess 
 {
-    [MenuItem("Test/Test")]
-    static void Test()
-    {
-        Adjust("Assets/z_Test");
-        AssetDatabase.Refresh();
-    }
-    [PostProcessBuildAttribute(99)]
+    //[MenuItem("Test/Test")]
+    //static void Test()
+    //{
+    //    Adjust("Assets/z_Test");
+    //    AssetDatabase.Refresh();
+    //}
+    [PostProcessBuildAttribute(9999)]
     public static void OnPostProcessBuild(BuildTarget target, string path)
     {
         if (target == BuildTarget.iOS)
