@@ -6,13 +6,8 @@ using System.Text;
 using System.Collections.Generic;
 public class IOS_Adjust_2019_4x_PostProcess 
 {
-    //[MenuItem("Test/Test")]
-    //static void Test()
-    //{
-    //    Adjust("Assets/z_Test");
-    //    AssetDatabase.Refresh();
-    //}
-    [PostProcessBuildAttribute(9999)]
+    const int EDM_BUILD_ORDER_GEN_PODFILE = 40;
+    [PostProcessBuildAttribute(EDM_BUILD_ORDER_GEN_PODFILE+1)]
     public static void OnPostProcessBuild(BuildTarget target, string path)
     {
         if (target == BuildTarget.iOS)
