@@ -4,7 +4,6 @@ using UnityEditor;
 using UnityEditor.Callbacks;
 using System.Text;
 using System.Collections.Generic;
-
 public class IOS_Adjust_2019_4x_PostProcess 
 {
     //[MenuItem("Test/Test")]
@@ -25,7 +24,8 @@ public class IOS_Adjust_2019_4x_PostProcess
     }
     static void Adjust(string path)
     {
-        var pod = path + "/Podfile";
+        var pod = Path.Combine(path, "Podfile");
+        Debug.Log(pod);
         if (File.Exists(pod))
         {
             var fils = File.ReadAllText(pod);
@@ -64,7 +64,8 @@ public class IOS_Adjust_2019_4x_PostProcess
                 }
             }
             string output = pod;
-            output = "Assets/z_Test/Podfile.txt";
+            //for test
+            //output = "Assets/z_Test/Podfile.txt";
             File.WriteAllText(output, builder.ToString());
         }
     }
