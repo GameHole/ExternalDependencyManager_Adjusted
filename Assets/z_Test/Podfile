@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+
+target 'UnityFramework' do
+  pod 'Ads-CN'
+  pod 'UMABTest'
+  pod 'UMAPM'
+  pod 'UMCCommonLog'
+  pod 'UMCommon'
+  pod 'UMDevice'
+end
+target 'Unity-iPhone' do
+end
+use_frameworks!
