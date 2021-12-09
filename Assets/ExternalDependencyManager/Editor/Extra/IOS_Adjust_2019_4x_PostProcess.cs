@@ -25,7 +25,6 @@ public class IOS_Adjust_2019_4x_PostProcess
     static void Adjust(string path)
     {
         var pod = Path.Combine(path, "Podfile");
-        Debug.Log(pod);
         if (File.Exists(pod))
         {
             var fils = File.ReadAllText(pod);
